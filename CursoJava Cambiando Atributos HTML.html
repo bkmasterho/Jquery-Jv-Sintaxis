@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<style>
+
+#imagen1{
+
+    width: 50%;
+    height: 25px;
+
+}
+
+table{
+	text-align:center;
+	width:50%;
+	border:none;
+	margin:auto;
+}
+
+img{
+	padding:0 5px;
+}
+h1{
+	text-align:center;
+}
+
+</style>
+<script src="C:\Users\Jesus\Desktop\PROGRAMACION\Jquery/jquery-1.6.3.min.js"></script>
+
+
+<script>
+
+  $(document).ready(function(){  
+  
+     var elementos=document.querySelectorAll("img");
+
+     for(var i=0;i<elementos.length;i++){
+
+        elementos[i].addEventListener("mouseover",cambiar,false);
+        elementos[i].addEventListener("mouseout",restaurar,false);
+
+     }
+  
+    });
+  
+    function cambiar(e){
+
+      if(e.target==img1){
+      
+        $("#img1").attr("src","carronuevo/claro2.jpg").width(200).height(250);
+    
+      }if(e.target==img2){
+      
+      $("#img2").attr("src","carronuevo/torta1.jpg").width(200).height(250);
+
+      }if(e.target==img3){
+      
+      $("#img3").attr("src","carronuevo/claro4.jpg").width(200).height(250);
+      }
+  }
+
+  function restaurar(e){
+
+
+    if(e.target==img1){
+      
+      $("#img1").attr("src","carronuevo/colorado2.jpg").width(200).height(250);
+  
+    }if(e.target==img2){
+    
+    $("#img2").attr("src","carronuevo/colorado3.jpg").width(200).height(250);
+
+    }if(e.target==img3){
+    
+    $("#img3").attr("src","carronuevo/colorado4.jpg").width(200).height(250);
+    }
+
+
+  }
+</script>
+</head>
+
+<body>
+<h1>Galería de imágenes</h1>
+<table width="100%" border="0">
+  <tr>
+    <td><img src="C:\Users\Jesus\Desktop\PROGRAMACION\CursoJavaJQUERY\carronuevo/colorado2.jpg" width="200" height="250" id="img1" ></td>
+    <td><img src="C:\Users\Jesus\Desktop\PROGRAMACION\CursoJavaJQUERY\carronuevo/colorado3.jpg" width="200" height="250" id="img2" ></td>
+    <td><img src="C:\Users\Jesus\Desktop\PROGRAMACION\CursoJavaJQUERY\carronuevo/colorado4.jpg" width="200" height="250" id="img3" ></td>
+    
+  </tr>
+</table>
+
+
+</body>
+</html>

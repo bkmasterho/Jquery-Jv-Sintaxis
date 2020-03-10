@@ -1,0 +1,49 @@
+Etiquetas blocklevel: Son etiquetas que vienen acompañadas implicitamente de saltos de linea 
+
+Atributo .html de jquery sirve para sustituir el texto escrito dentro de una etiqueta sea <p>,<h1> o <div>
+
+Atributo .append Si quisieramos que el texto apareciera despues del texto que ya esta escrito dentro de la etiqueta
+
+Atributo .prepend  lo mismo que apprend pero Si quisieramos que el texto apreciera antes.
+
+Atributo .before  Con este lo que sucede es que coloca el texto antes del elemento al que estamos apuntando y .after 
+lo hace despues.
+
+Etiqueta Remove, para eliminar contenido
+
+Atributo .Text este atributo te modifica lo que hay en un texto, pero tienes que apuntar directo a la etiqueta para que 
+lo haga a diferencia del de html que si lo hace poniendo la etiqueta ejemplo::
+
+RemplaceWith: Para remplazar elementos dentro de una etiqueta
+
+$(document).ready(function(){
+
+        $("#errores h2").text("Hay errores en el formulario"); Poniendo "errores h2" moficamos directamente lo que hay dentro de esa etiqueta.
+
+});
+
+
+para accesder a un atributo de class que contenga parragos, img etc escribo algo por ejemplo $("p.destacado") y si es dentro de un
+id algo por ejemplo tipo (#carrete img). formas de escribirlo
+
+cuanto escribes e.target le estas preguntando "Oye dime si el objeto que esta desencadenando el evento es: ""
+
+
+addClass Para agregar clases
+ToggeClass Funciona a modo de OnOff se apaga y prende.
+RemoveClass
+
+Si queremos cambiar atributos Html podemos usar $("#nombre del atributo").css("y aqui adentro escribos lo que queramos modificar separado por comas) 
+Eje("background-color",red)
+
+
+y si queremos modificar directamente su clase escribimos eje:$("p.destacado).css("border") esto para apuntar a la class del parrafo.
+
+removeClass para remover clases 
+removeAttr para remover atributos HTML
+el atributo each es para que me recorra elementos
+y (this) es para acceder a los selectores hijos y tambien hace referencia al propio objeto en donde estemos ubicado en ese momento.
+cuando un elemento es seleccionado se dice que ha cojido el focus por lo tanto al seleccionar un elemento y haga una accion se le aplica el focus
+
+
+hide: para desaparecer un elemento

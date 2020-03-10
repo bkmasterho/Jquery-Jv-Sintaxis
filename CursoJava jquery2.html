@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+
+    <script src="C:\Users\Jesus\Desktop\PROGRAMACION\Jquery/jquery-1.6.3.min.js"></script>
+
+    <script>
+    
+    
+    $(document).ready(function(){
+
+        $("#anuncio").width(500)
+        .height(500)
+        .text("!Vende")
+        .hide()
+        .fadeIn(10000);
+
+    })
+    
+    </script>
+
+
+<style>
+    
+    #anuncio{
+
+    background-color:#000;
+    color:#FFF;
+    font-size:24px;
+        
+    }
+
+</style>
+
+
+</head>
+<body>
+   
+        <div id="anuncio">
+
+
+            !COMPRA
+
+        </div>
+   
+
+        <script>
+
+        /* esto es para hacer lo mismo pero de manera tradicional a diferencia de QuerySelector que almacena muchos elementos en un array
+        aqui solamente estoy identificando un solo elemento por su id
+
+            var anuncio=document.getElementById("anuncio");
+            
+            anuncio.style.width="500px";
+        
+            anuncio.style.height="500px";
+        
+            anuncio.innerHTML="!Vende";
+        
+        
+        </script>
+        
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="C:\Users\Jesus\Desktop\PROGRAMACION\Jquery/jquery-1.6.3.min.js"></script>
+
+    
+        <script>
+ 
+     /* Forma super corta, pero funciona al apretar el banner en general, no necesariamente la palabra "Cerrar"
+ $(function(){
+          $("#banner").click(function(){
+          $(this).remove();
+        });
+      });
+         */
+            
+            $(document).ready(function(){
+
+            //formar mas corta
+
+            document.getElementById("cerrar").addEventListener("click",cerrar_banner,false);
+        
+            var imagenes=document.querySelectorAll("#carrete img");
+                
+                for(var i=0;i<imagenes.length;i++){
+
+                    imagenes[i].addEventListener("click",carrito,false);
+
+            }
+            
+        });
+            
+           /*
+            forma larga
+
+            var z=document.getElementById("cerrar");
+            z.addEventListener("click", cerrar_banner,false); */
+
+        
+        function carrito(num){
+
+                $('#carrete img').click(function(){
+            $(this).replaceWith("<div id='sustitucion'>Agregado al carrito</div>")
+                })
+
+        }
+            /* MANERA LARGAA
+
+            if (num.target==imagen1){
+        $("#imagen1").replaceWith("<div id='imagen1'>Agregado al carrito</div>");
+
+        }
+        
+            else if (num.target==imagen2){
+        
+        $("#imagen2").replaceWith("<div id='imagen2'>Agregado al carrito</div>");
+        
+        
+            }
+            else if (num.target==imagen3){
+        
+        $("#imagen3").replaceWith("<div id='imagen3'>Agregado al carrito</div>");
+        
+        
+            }
+            else if(num.target==imagen4){
+        
+        $("#imagen4").replaceWith("<div id='imagen4'>Agregado al carrito</div>");
+        
+        
+            }
+        
+        }
+
+        */
+        
+
+        function cerrar_banner(){
+
+            $("#banner").remove();
+
+        }
+    
+/* Lo que sucede es que creamos la funcion en la cual el elemento "cerrar" se va almecenar dentro de la variable "z"
+seguidamente llamamos al evento para cuando se aprete click esta te llame la funcion cerrar_banner*/
+        </script>
+    
+    
+        <style>
+    
+    
+        #banner{
+
+            background-color: crimson;
+            width:450px;
+            height:300px;
+            position:absolute;
+            left:400px;
+            top:50px;
+            font-size:36px;
+            text-align:center;
+        }
+    
+        #sustitucion{
+
+
+            float:left;
+            margin:15px;
+            width:350px;
+            height: 200px;
+            font-size:36px;
+
+        }
+    
+    </style>
+
+
+</head>
+<body>
+    
+
+        <div id="banner">
+
+            Banner de Prueba
+
+            <p id="cerrar">Cerrar</p>
+        </div>
+
+        <div id="carrete">
+
+        <img src="C:\Users\Jesus\Desktop\Imgnuevas/Carros3.jpg" width="350" height="420" id="sustitucion">
+        <img src="C:\Users\Jesus\Desktop\Imgnuevas/Carros2.jpg" width="350" height="420" id="sustitucion">
+        <img src="C:\Users\Jesus\Desktop\Imgnuevas/Tortaoso1.jpg" width="260" height="420" id="sustitucion">
+        <img src="C:\Users\Jesus\Desktop\Imgnuevas/Tortarica2.jpg" width="250" height="420" id="sustitucion">
+        
+</div>
+</body>
+</html>
